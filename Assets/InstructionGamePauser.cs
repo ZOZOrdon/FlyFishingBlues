@@ -4,12 +4,14 @@ public class InstructionGamePauser : MonoBehaviour
 {
     private bool isPaused = false;  // 用于检测游戏是否已暂停
     public KeyCode resumeKey;  // 公共变量，用于指定恢复游戏的按键
+    public GameObject pauseUI;  // 公共变量，用于指定暂停时显示的UI组件
 
     void OnTriggerEnter(Collider other)
     {
-        // 当检测到触发器碰撞时，暂停游戏
+        // 当检测到触发器碰撞时，激活UI组件并暂停游戏
         if (!isPaused)
         {
+            pauseUI.SetActive(true);
             PauseGame();
         }
     }
@@ -28,6 +30,9 @@ public class InstructionGamePauser : MonoBehaviour
         Time.timeScale = 1f;  // 恢复游戏
         isPaused = false;
         Debug.Log("Game Resumed");
+
+        // 将UI组件失活
+        pauseUI.SetActive(false);
 
         // 将自身的GameObject失活
         gameObject.SetActive(false);

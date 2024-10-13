@@ -24,6 +24,7 @@ public class ReleaseSpaceAppear : MonoBehaviour
 
     void Update()
     {
+    
         // 检查RopeProgressBar的值是否大于0.8
         if (ropeProgressBar != null && ropeProgressBar.value > 0.8f && !isFadingIn)
         {

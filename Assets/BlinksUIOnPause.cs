@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DynamicInputSpace : MonoBehaviour
+public class BlinksUIOnPause : MonoBehaviour
 {
     public float blinkDuration = 1f;  // 闪烁的周期时长
     public float minAlpha = 0f;  // 最小透明度
