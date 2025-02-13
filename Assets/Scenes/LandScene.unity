@@ -16289,6 +16289,7 @@ GameObject:
   - component: {fileID: 1188538651}
   - component: {fileID: 1188538650}
   - component: {fileID: 1188538649}
+  - component: {fileID: 1188538652}
   m_Layer: 5
   m_Name: KillButton (1)
   m_TagString: Untagged
@@ -16359,7 +16360,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1188538650}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1188538650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16398,6 +16411,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188538647}
   m_CullTransparentMesh: 1
+--- !u!114 &1188538652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188538647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b9470b8bb064b4999687a3fc8ec15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1191337180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29678,7 +29703,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2027938006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a3989ee1e3184507a4f62cb6ae95c9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slowSpeedThreshold: 0.5
