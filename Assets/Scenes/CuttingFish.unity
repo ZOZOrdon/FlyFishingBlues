@@ -296,10 +296,10 @@ MonoBehaviour:
   targetsToCut:
   - {fileID: 8180085750967518909}
   KnifeController: {fileID: 1757666133}
-  bloodEffectPrefab: {fileID: 1687285671110947340, guid: dc4c2c5f6f86a8d478bb165959803900,
-    type: 3}
   targetScale: {x: 1, y: 1, z: 1}
   Bucket: {fileID: 404153374}
+  BloodEffectPrefab: {fileID: 919132149155446097, guid: dffebc14719a76846b53ad6fbe6cadf4,
+    type: 3}
 --- !u!114 &111983020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a765be06eca9f9749ba7b5a086abe272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishstruggling: {fileID: 0}
+  fishstruggling: {fileID: 6905609871810326500}
   escapeInterval: 2
 --- !u!65 &965672894
 BoxCollider:

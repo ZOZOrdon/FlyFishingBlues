@@ -9,10 +9,16 @@ namespace DynamicMeshCutter
 
         public MeshTarget[] targetsToCut;
         public KnifeController KnifeController;
-        public GameObject bloodEffectPrefab;
-        public Vector3 targetScale = new Vector3(10f, 10f, 10f);
-        public GameObject Bucket;
 
+        public Vector3 targetScale = new Vector3(2f, 2f, 0.5f);
+        public GameObject Bucket;
+        public GameObject BloodEffectPrefab;
+        private Transform bloodTransform;
+
+        public void Start()
+        {
+            
+        }
         public void Cut()
         {
             if (targetsToCut != null && targetsToCut.Length > 0)
@@ -35,14 +41,19 @@ namespace DynamicMeshCutter
 
         void OnCreated(Info info, MeshCreationData cData)
         {
-            MeshCreation.TranslateCreatedObjects(info, cData.CreatedObjects, cData.CreatedTargets, Separation);
-            
-            Vector3 spawnPosition = info.MeshTarget.transform.position;
-            Quaternion spawnRotation = Quaternion.identity; // 根据需要调整旋转
-            GameObject bloodEffect = Instantiate(bloodEffectPrefab, spawnPosition, spawnRotation);
+            // 指定位置和旋转
+            Vector3 position = new Vector3(-0.05f, 0.55f, 0f);
+            Quaternion rotation = Quaternion.Euler(-90f, 0f, 0f);
 
+            // 实例化预制体
+            GameObject instance = Instantiate(BloodEffectPrefab, position, rotation);
+
+            // 手动设置缩放
+            instance.transform.localScale = new Vector3(0.05f, 0.05f, 1f); 
+            bloodTransform = instance.transform;
+            MeshCreation.TranslateCreatedObjects(info, cData.CreatedObjects, cData.CreatedTargets, Separation);
             // 启动协程，放大血迹效果
-            StartCoroutine(ScaleBloodEffect(bloodEffect.transform));
+            StartCoroutine(ScaleBloodEffect());
             foreach (var target in cData.CreatedTargets)
             {
                 if (target != null)
@@ -54,12 +65,13 @@ namespace DynamicMeshCutter
             }
             Bucket.SetActive(true);
         }
-        IEnumerator ScaleBloodEffect(Transform bloodTransform)
+        IEnumerator ScaleBloodEffect()
         {
-            float duration = 1f; // 放大持续时间
+
+            float duration = 5f; // 放大持续时间
             float elapsedTime = 0f;
-            Vector3 initialScale = Vector3.zero; // 初始大小为 0
-             // 目标大小，根据需要调整
+            Vector3 initialScale = bloodTransform.localScale; // 初始大小为 0
+                                                                  // 目标大小，根据需要调整
 
             // 将血迹效果的初始大小设置为 0
             bloodTransform.localScale = initialScale;
