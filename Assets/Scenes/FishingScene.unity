@@ -3032,52 +3032,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 205682579}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &218825072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: defe3efb56c1bc943a6bfb504a00dc77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  startDistance:
-    m_OverrideState: 0
-    m_Value: 0
-  fogDensity:
-    m_OverrideState: 0
-    m_Value: 20
-  heightFogDepth:
-    m_OverrideState: 0
-    m_Value: 25
-  heightFogDensity:
-    m_OverrideState: 0
-    m_Value: 1
-  heightFogBrightness:
-    m_OverrideState: 0
-    m_Value: 0.6
-  fogBrightness:
-    m_OverrideState: 0
-    m_Value: 1
-  subsurfaceStrength:
-    m_OverrideState: 0
-    m_Value: 0.35
-  causticsStrength:
-    m_OverrideState: 0
-    m_Value: 1
-  distortionStrength:
-    m_OverrideState: 0
-    m_Value: 0.25
-  distortionFrequency:
-    m_OverrideState: 0
-    m_Value: 0.75
-  distortionSpeed:
-    m_OverrideState: 0
-    m_Value: 0.5
 --- !u!1001 &232272886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4249,6 +4203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 370200123}
   - component: {fileID: 370200124}
+  - component: {fileID: 370200125}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -4290,6 +4245,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &370200125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370200122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1001 &380188200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4561,6 +4536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 398228977}
   - component: {fileID: 398228978}
+  - component: {fileID: 398228979}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -4602,6 +4578,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &398228979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398228976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1001 &401606559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6020,6 +6016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444266370}
   - component: {fileID: 444266371}
+  - component: {fileID: 444266372}
   m_Layer: 0
   m_Name: 7
   m_TagString: Untagged
@@ -6061,6 +6058,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &444266372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444266369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1 &454402206
 GameObject:
   m_ObjectHideFlags: 0
@@ -7636,7 +7653,7 @@ MonoBehaviour:
   waterLevelPadding: 0.5
   waterMaterial: {fileID: 2100000, guid: ed0416582c0e8af4c95f12cde52ed507, type: 2}
   dynamicMaterial: 0
-  settings: {fileID: 218825072}
+  settings: {fileID: 0}
   useVolumeBlending: 0
   startDistance: 0
   fogDensity: 0.7
@@ -12081,7 +12098,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766381813}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -16096,6 +16113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977499610}
   - component: {fileID: 977499611}
+  - component: {fileID: 977499612}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -16137,6 +16155,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &977499612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977499609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1001 &986463761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17371,6 +17409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1091044530}
   - component: {fileID: 1091044531}
+  - component: {fileID: 1091044532}
   m_Layer: 0
   m_Name: 9
   m_TagString: Untagged
@@ -17412,6 +17451,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &1091044532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091044529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1001 &1092705274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20767,6 +20826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1315228829}
   - component: {fileID: 1315228830}
+  - component: {fileID: 1315228831}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -20808,6 +20868,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &1315228831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315228828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1001 &1318951037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25654,6 +25734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1586866805}
   - component: {fileID: 1586866806}
+  - component: {fileID: 1586866807}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -25695,6 +25776,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &1586866807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586866804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1001 &1588773427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30176,6 +30277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1811597787}
   - component: {fileID: 1811597788}
+  - component: {fileID: 1811597789}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -30217,6 +30319,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &1811597789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811597786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1 &1817977596
 GameObject:
   m_ObjectHideFlags: 0
@@ -30227,6 +30349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1817977597}
   - component: {fileID: 1817977598}
+  - component: {fileID: 1817977599}
   m_Layer: 0
   m_Name: 10
   m_TagString: Untagged
@@ -30268,6 +30391,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &1817977599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817977596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1 &1824636673
 GameObject:
   m_ObjectHideFlags: 0
@@ -30278,6 +30421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1824636674}
   - component: {fileID: 1824636675}
+  - component: {fileID: 1824636676}
   m_Layer: 0
   m_Name: 8
   m_TagString: Untagged
@@ -30319,6 +30463,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &1824636676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824636673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1001 &1824952869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33249,6 +33413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2001224271}
   - component: {fileID: 2001224272}
+  - component: {fileID: 2001224273}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -33290,6 +33455,26 @@ MonoBehaviour:
     m_DampPosition: 0.1
     m_DampRotation: 0.5
     m_MaintainAim: 1
+--- !u!114 &2001224273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001224270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576e0137607085e47bd3cf92fc568ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowSpeedThreshold: 0.5
+  midSpeedThreshold: 1.5
+  slowSwayAmplitude: 5
+  slowSwayFrequency: 1
+  midSwayAmplitude: 10
+  midSwayFrequency: 2
+  fastSwayAmplitude: 15
+  fastSwayFrequency: 3
 --- !u!1001 &2001640960
 PrefabInstance:
   m_ObjectHideFlags: 0
