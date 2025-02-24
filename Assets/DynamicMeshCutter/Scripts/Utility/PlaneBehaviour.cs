@@ -10,7 +10,7 @@ namespace DynamicMeshCutter
         public MeshTarget[] targetsToCut;
         public KnifeController KnifeController;
 
-        public Vector3 targetScale = new Vector3(2f, 2f, 0.5f);
+        public Vector3 targetScale = new Vector3(1.5f, 1.5f, 0.5f);
         public GameObject Bucket;
         public GameObject BloodEffectPrefab;
         private Transform bloodTransform;
@@ -42,7 +42,7 @@ namespace DynamicMeshCutter
         void OnCreated(Info info, MeshCreationData cData)
         {
             // 指定位置和旋转
-            Vector3 position = new Vector3(-0.05f, 0.55f, 0f);
+            Vector3 position = new Vector3(-0.05f, 0.55f, 0.05f);
             Quaternion rotation = Quaternion.Euler(-90f, 0f, 0f);
 
             // 实例化预制体
@@ -68,7 +68,7 @@ namespace DynamicMeshCutter
         IEnumerator ScaleBloodEffect()
         {
 
-            float duration = 5f; // 放大持续时间
+            float duration = 3f; // 放大持续时间
             float elapsedTime = 0f;
             Vector3 initialScale = bloodTransform.localScale; // 初始大小为 0
                                                                   // 目标大小，根据需要调整
