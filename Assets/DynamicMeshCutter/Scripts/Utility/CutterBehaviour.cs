@@ -236,9 +236,9 @@ namespace DynamicMeshCutter
                 {
                     info.MeshTarget.transform.position = new Vector3(0, -10000, 0);
                     if (info.MeshTarget.GameobjectRoot != null)
-                        Destroy(info.MeshTarget.GameobjectRoot, 0);
+                        Destroy(info.MeshTarget.GameobjectRoot, 0.1f);
                     else
-                        Destroy(info.MeshTarget.gameObject, 0);
+                        Destroy(info.MeshTarget.gameObject, 0.1f);
                 }
             }
 
